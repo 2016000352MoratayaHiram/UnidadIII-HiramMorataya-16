@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos y Atributos de Formulario HTML</title>
+    <!-- Incluir Tailwind CSS para un estilo moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuente Inter para una mejor legibilidad */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Fondo suave */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+        <h1 class="text-3xl font-bold text-center py-6 bg-blue-600 text-white rounded-t-lg">
+            Guía de Elementos y Atributos de Formulario HTML
+        </h1>
+        <div class="p-4 sm:p-6">
+            <p class="text-gray-700 mb-6 text-lg leading-relaxed">
+                Los formularios web son esenciales para recolectar información de los usuarios. Aquí se detallan los elementos más comunes utilizados en HTML, incluyendo nuevas adiciones de HTML5, y atributos importantes.
+            </p>
+
+            <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden">
+                <thead class="bg-blue-100">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-800 uppercase tracking-wider">
+                            Elemento HTML
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-blue-800 uppercase tracking-wider">
+                            Descripción
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- HTML - HTML 4 Section -->
+                    <tr>
+                        <td colspan="2" class="px-6 py-3 text-left text-sm font-bold text-blue-900 bg-blue-200 uppercase tracking-wider">
+                            HTML - HTML 4
+                        </td>
+                    </tr>
+                    <!-- Fila para el formulario principal -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800 bg-blue-50/50 rounded-bl-lg">
+                            <pre class="whitespace-pre-wrap">&lt;form&gt; &lt;/form&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-blue-50/50 rounded-br-lg">
+                            <p>Iniciar y finalizar formulario.</p>
+                            <p class="mt-2 font-semibold">Atributos:</p>
+                            <ul class="list-disc list-inside ml-4">
+                                <li><code>method="get"</code>, <code>"post"</code></li>
+                                <li><code>action="página de enlace"</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="text" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="text"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Caja de Texto
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="password" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="password"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Caja de Texto tipo contraseña, no se aprecian los caracteres ingresados en este elemento ya que son sustituidos por un carácter.
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="radio" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="radio"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Opción (para seleccionar una de varias)
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="checkbox" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="checkbox"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selección (para seleccionar múltiples opciones)
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="submit" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="submit" value="Submit"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Botón de Envío
+                        </td>
+                    </tr>
+                    <!-- Fila para textarea -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;textarea rows="10" cols="30"&gt; &lt;/textarea&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Área de Texto (para texto de varias líneas)
+                        </td>
+                    </tr>
+                    <!-- Fila para select y option -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800 rounded-bl-lg">
+                            <pre class="whitespace-pre-wrap">&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+&lt;/select&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 rounded-br-lg">
+                            Lista (Combo box o menú desplegable)
+                        </td>
+                    </tr>
+
+                    <!-- HTML 5 Section -->
+                    <tr>
+                        <td colspan="2" class="px-6 py-3 text-left text-sm font-bold text-blue-900 bg-blue-200 uppercase tracking-wider">
+                            HTML 5
+                            <p class="text-xs font-normal mt-1">Importante: la mayoría de estas etiquetas funcionan únicamente en los navegadores Google Chrome o Safari.</p>
+                        </td>
+                    </tr>
+                    <!-- Fila para input list y datalist -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input list="nombre"&gt;
+  &lt;datalist id="nombre"&gt;
+    &lt;option value="valor 1"&gt;
+    &lt;option value="valor 2"&gt;
+    &lt;option value="valor 3"&gt;
+    &lt;option value="valor 4"&gt;
+    &lt;option value="valor 5"&gt;
+  &lt;/datalist&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Caja de texto con lista de valores predefinidos.
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="color" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="color"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selector de Color
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="date" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="date"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selector de Fecha
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="datetime" (desactualizado) y type="datetime-local" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="datetime-local"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selector de Hora y Fecha Local
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="email" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="email"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Campo para Correo Electrónico
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="month" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="month"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selector de Mes
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="number" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="number" min="1" max="10" step="2" value="3"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Números en un listado, especificando incremento y valor por defecto.
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="range" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="range" min="1" max="10" step="1" value="1"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Barra de desplazamiento especificando tamaño, incremento y valor por defecto.
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="time" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">&lt;input type="time"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Selector de Hora
+                        </td>
+                    </tr>
+                    <!-- Fila para input type="week" -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800 rounded-bl-lg">
+                            <pre class="whitespace-pre-wrap">&lt;input type="week"&gt;</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 rounded-br-lg">
+                            Semana y año. Los valores para semana pueden ser desde 1 hasta 53 (el año posee 53 semanas).
+                        </td>
+                    </tr>
+
+                    <!-- Atributos Section -->
+                    <tr>
+                        <td colspan="2" class="px-6 py-3 text-left text-sm font-bold text-blue-900 bg-blue-200 uppercase tracking-wider">
+                            ATRIBUTOS
+                        </td>
+                    </tr>
+                    <!-- Fila para Placeholder -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">placeholder="texto a mostrar"</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Escribir texto de explicación en objetos, principalmente cajas de texto.
+                        </td>
+                    </tr>
+                    <!-- Fila para name -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">name="Nombre del objeto"</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Nombre del objeto. Como norma y buena práctica, todos los objetos deben poseer nombre.
+                        </td>
+                    </tr>
+                    <!-- Fila para required -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">required</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Dato obligatorio.
+                        </td>
+                    </tr>
+                    <!-- Fila para value -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">value="valor"</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Valor por defecto del elemento.
+                        </td>
+                    </tr>
+                    <!-- Fila para maxlength -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800">
+                            <pre class="whitespace-pre-wrap">maxlength="tamaño"</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            Largo máximo de texto.
+                        </td>
+                    </tr>
+                    <!-- Fila para size -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-800 rounded-bl-lg">
+                            <pre class="whitespace-pre-wrap">size="tamaño"</pre>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 rounded-br-lg">
+                            Tamaño del objeto.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
